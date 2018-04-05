@@ -1,26 +1,3 @@
-/*******************************************************/
-/*                                                     */
-/*                     agglom.c                        */
-/*                     ========                        */
-/*                                                     */
-/*     C programme to demonstrate agglomerative        */
-/*                clustering on 2D data                */
-/*                                                     */
-/*          Written for EE3J2 Data Mining              */
-/*                                                     */
-/*        Version 2: Martin Russell 09/03/2010         */
-/*                                                     */
-/* School Electronic, Electrical & Computer Eng.       */
-/*            University of Birmingham                 */
-/*                                                     */
-/*    To compile under linux:                          */
-/*                 gcc -lm agglom.c                    */
-/*                 mv a.out agglom                     */
-/*                                                     */
-/*    To run:                                          */
-/*                 agglom ipFile Name opFileName       */
-/*                                                     */
-/*******************************************************/
 
 #define MAX_STR_LEN 512
 #define MAX_LIN_LEN 30

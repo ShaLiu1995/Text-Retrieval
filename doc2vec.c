@@ -1,24 +1,3 @@
-/*******************************************************/
-/*                                                     */
-/*           C programme to covert a set of            */
-/*               documents into vectors                */
-/*                                                     */
-/*          Written for EE3J2 Data Mining              */
-/*                                                     */
-/*        Version 1: Martin Russell 29/02/04           */
-/*                                                     */
-/* Dept. Electronic, Electrical & Computer Engineering */
-/*            University of Birmingham                 */
-/*                                                     */
-/*    To compile under linux:                          */
-/*                 gcc -lm doc2vec.c                   */
-/*                 mv a.out doc2vec                    */
-/*                                                     */
-/*    To run:                                          */
-/*                 doc2vec scriptFile                  */
-/*                                                     */
-/*******************************************************/
-
 #define MAX_STR_LEN 512
 
 #include <math.h>

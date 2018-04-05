@@ -1,26 +1,3 @@
-/*******************************************************/
-/*                                                     */
-/*                     stop.c                          */
-/*                     ======                          */
-/*                                                     */
-/*   C programme to remove stoplist words from texts   */
-/*                                                     */
-/*          Written for EE3J2 Data Mining              */
-/*                                                     */
-/*        Version 1: Martin Russell 21/01/04           */
-/*                                                     */
-/* Dept. Electronic, Electrical & Computer Engineering */
-/*            University of Birmingham                 */
-/*                                                     */
-/*    To compile under linux:                          */
-/*                 gcc stop.c                          */
-/*                 mv a.out stop                       */
-/*                                                     */
-/*    To run:                                          */
-/*                 stop stoplist text                  */
-/*                                                     */
-/*******************************************************/
-
 #define MAX_STR_LEN 512
 #define MAX_LIN_LEN 30
 

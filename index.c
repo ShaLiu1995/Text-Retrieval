@@ -1,23 +1,3 @@
-/*******************************************************/
-/*                                                     */
-/*  C programme to create term - document index file   */
-/*                                                     */
-/*          Written for EE3J2 Data Mining              */
-/*                                                     */
-/*        Version 1: Martin Russell 28/01/04           */
-/*                                                     */
-/* Dept. Electronic, Electrical & Computer Engineering */
-/*            University of Birmingham                 */
-/*                                                     */
-/*    To compile under linux:                          */
-/*                 gcc -lm index.c                     */
-/*                 mv a.out index                      */
-/*                                                     */
-/*    To run:                                          */
-/*                 index scriptFile                    */
-/*                                                     */
-/*******************************************************/
-
 #define MAX_STR_LEN 512
 
 #include <math.h>

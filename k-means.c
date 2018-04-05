@@ -1,27 +1,3 @@
-/*********************************************************/
-/*                                                       */
-/*                     k-means.c                         */
-/*                     =========                         */
-/*                                                       */
-/*        C programme to demonstrate k-means             */
-/*              clustering on vector data                */
-/*                                                       */
-/*          Written for EE3J2 Data Mining                */
-/*                                                       */
-/*        Version 2: Martin Russell 09/03/2010           */
-/*                                                       */
-/* School of Electronic, Electrical & Computer Eng.      */
-/*            University of Birmingham                   */
-/*                                                       */
-/*    To compile under linux:                            */
-/*                 gcc -lm k-means.c                     */
-/*                 mv a.out k-means                      */
-/*                                                       */
-/*    To run:                                            */
-/*                 k-means ipFile centroids opFile numIt */
-/*                                                       */
-/*********************************************************/
-
 #define MAX_STR_LEN 512
 #define MAX_LIN_LEN 30
 #define BIGNUM 1.0e12
