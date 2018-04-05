@@ -16,16 +16,6 @@ static int cons(int i)
    }
 }
 
-/* m() measures the number of consonant sequences between k0 and j. if c is
-   a consonant sequence and v a vowel sequence, and <..> indicates arbitrary
-   presence,
-
-      <c><v>       gives 0
-      <c>vc<v>     gives 1
-      <c>vcvc<v>   gives 2
-      <c>vcvcvc<v> gives 3
-      ....
-*/
 
 static int m()
 {  int n = 0;
@@ -67,14 +57,6 @@ static int doublec(int j)
    return cons(j);
 }
 
-/* cvc(i) is TRUE <=> i-2,i-1,i has the form consonant - vowel - consonant
-   and also if the second c is not w,x or y. this is used when trying to
-   restore an e at the end of a short word. e.g.
-
-      cav(e), lov(e), hop(e), crim(e), but
-      snow, box, tray.
-
-*/
 
 static int cvc(int i)
 {  if (i < k0+2 || !cons(i) || cons(i-1) || !cons(i-2)) return FALSE;
@@ -258,23 +240,10 @@ static void step5()
    if (b[k] == 'l' && doublec(k) && m() > 1) k--;
 }
 
-/* In stem(p,i,j), p is a char pointer, and the string to be stemmed is from
-   p[i] to p[j] inclusive. Typically i is zero and j is the offset to the last
-   character of a string, (p[j+1] == '\0'). The stemmer adjusts the
-   characters p[i] ... p[j] and returns the new end-point of the string, k.
-   Stemming never increases word length, so i <= k <= j. To turn the stemmer
-   into a module, declare 'stem' as extern, and delete the remainder of this
-   file.
-*/
 
 int stem(char * p, int i, int j)
 {  b = p; k = j; k0 = i; /* copy the parameters into statics */
    if (k <= k0+1) return k; /*-DEPARTURE-*/
-
-   /* With this line, strings of length 1 or 2 don't go through the
-      stemming process, although no mention is made of this in the
-      published algorithm. Remove the line to match the published
-      algorithm. */
 
    step1ab(); step1c(); step2(); step3(); step4(); step5();
    return k;
